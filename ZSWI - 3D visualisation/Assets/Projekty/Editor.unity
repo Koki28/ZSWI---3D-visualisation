@@ -8088,12 +8088,17 @@ RectTransform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_AnchorMin: {x: 0, y: 0.7736584}
   m_AnchorMax: {x: 1, y: 1}
 =======
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
 >>>>>>> 820089686837714a6b50b1ed574dd56bd623b8b1
+=======
+  m_AnchorMin: {x: 0, y: 0.6125399}
+  m_AnchorMax: {x: 1, y: 1}
+>>>>>>> parent of 8200896... Pokus 0.002
 =======
   m_AnchorMin: {x: 0, y: 0.6125399}
   m_AnchorMax: {x: 1, y: 1}
