@@ -68,6 +68,7 @@ public class ShowPanels : MonoBehaviour
         optionsPanel.SetActive(false);
         optionsTint.SetActive(false);
         scenePanel.SetActive(false);
+		aboutPanel.SetActive(false);
     }
 
     //Call this function to activate and display the main menu panel during the main menu
