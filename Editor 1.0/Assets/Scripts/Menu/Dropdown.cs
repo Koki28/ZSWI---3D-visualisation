@@ -17,7 +17,7 @@ public class Dropdown : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 	// Update is called once per frame
 	void Update () {
 		Vector3 scale = container.localScale;
-		scale.y = Mathf.Lerp (scale.y, isOpen ? 1 : 0, Time.deltaTime * 12);
+		scale.y = Mathf.Lerp (scale.y, isOpen ? 1 : 0, Time.deltaTime * 25);
 		container.localScale = scale;
 	}
 

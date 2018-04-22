@@ -658,7 +658,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Save Scene
 --- !u!222 &40563662
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1153,7 +1153,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Menu
+  m_Text: File
 --- !u!222 &191951842
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2103,7 +2103,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Exit
 --- !u!222 &362211574
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4644,7 +4644,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1030911156}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.23393156
+  m_Size: 0.23089471
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7185,7 +7185,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: New Scene
 --- !u!222 &1506458274
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8117,7 +8117,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Open Scene
 --- !u!222 &1722441205
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8671,7 +8671,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Save Scene as...
 --- !u!222 &1865962399
 CanvasRenderer:
   m_ObjectHideFlags: 0
