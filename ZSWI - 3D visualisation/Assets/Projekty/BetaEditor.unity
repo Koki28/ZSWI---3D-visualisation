@@ -657,6 +657,7 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 59810777}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &78516311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,6 +1443,8 @@ CanvasRenderer:
   m_GameObject: {fileID: 59810777}
 =======
 >>>>>>> parent of 9a88f2a... revert Editor 3.2
+=======
+>>>>>>> parent of 2351622... Editor 3.2
 --- !u!1 &78516311
 GameObject:
   m_ObjectHideFlags: 0
