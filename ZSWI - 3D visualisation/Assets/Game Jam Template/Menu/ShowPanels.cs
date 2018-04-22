@@ -8,11 +8,7 @@ public class ShowPanels : MonoBehaviour
     public GameObject optionsPanel;                         //Store a reference to the Game Object OptionsPanel 
     public GameObject optionsTint;                          //Store a reference to the Game Object OptionsTint 
     public GameObject menuPanel;                            //Store a reference to the Game Object MenuPanel 
-<<<<<<< HEAD
     public GameObject scenePanel;                           //Store a reference to the Game Object ScenePanel 
-=======
-    public GameObject scenePanel;                           //Store a reference to the Game Object ScenePanel 
->>>>>>> 9a88f2abcf6d8b66247c983d9ef1dc9f1d5e8492
     public GameObject aboutPanel;                           //Store a reference to the Game Object AboutPanel 
 
 
@@ -66,11 +62,7 @@ public class ShowPanels : MonoBehaviour
 
     }
 
-<<<<<<< HEAD
     //Call this function to deactivate and hide the About, Options and Scene panel during the main menu
-=======
-    //Call this function to deactivate and hide the Options, Scene and About panel during the main menu
->>>>>>> 9a88f2abcf6d8b66247c983d9ef1dc9f1d5e8492
     public void HideOtherPanels()
     {
         menuPanel.SetActive(true);
