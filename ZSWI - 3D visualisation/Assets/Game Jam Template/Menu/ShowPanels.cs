@@ -11,7 +11,6 @@ public class ShowPanels : MonoBehaviour
     public GameObject scenePanel;                           //Store a reference to the Game Object ScenePanel 
     public GameObject aboutPanel;                           //Store a reference to the Game Object AboutPanel 
 
-
     private GameObject activePanel;
     private MenuObject activePanelMenuObject;
     private EventSystem eventSystem;
@@ -44,7 +43,7 @@ public class ShowPanels : MonoBehaviour
 
     }
 
-    //Call this function to activate and display the Scene panel during the main menu
+    //Call this function to activate and display the Options panel during the main menu
     public void ShowScnenePanel()
     {
         scenePanel.SetActive(true);
@@ -69,7 +68,6 @@ public class ShowPanels : MonoBehaviour
         optionsPanel.SetActive(false);
         optionsTint.SetActive(false);
         scenePanel.SetActive(false);
-        aboutPanel.SetActive(false);
     }
 
     //Call this function to activate and display the main menu panel during the main menu
