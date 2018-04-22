@@ -7,7 +7,6 @@ public class ShowPanels : MonoBehaviour
 
     public GameObject optionsPanel;                         //Store a reference to the Game Object OptionsPanel 
     public GameObject optionsTint;                          //Store a reference to the Game Object OptionsTint 
->>>>>>> parent of 1feef8d... Editor 4
     public GameObject menuPanel;							//Store a reference to the Game Object MenuPanel 
     public GameObject scenePanel;                           //Store a reference to the Game Object ScenePanel 
     public GameObject aboutPanel;							//Store a reference to the Game Object AboutPanel 
