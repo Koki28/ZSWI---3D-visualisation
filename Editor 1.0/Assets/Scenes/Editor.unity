@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flexibleUIData: {fileID: 0}
+  text: {fileID: 37494107}
   useMainFont: 1
 --- !u!114 &37494107
 MonoBehaviour:
@@ -3734,6 +3735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flexibleUIData: {fileID: 0}
+  button: {fileID: 734426976}
 --- !u!114 &734426976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11778,7 +11780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.375, g: 0.79310364, b: 1, a: 1}
+  m_Color: {r: 0.57855755, g: 0.7965429, b: 0.9044118, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
