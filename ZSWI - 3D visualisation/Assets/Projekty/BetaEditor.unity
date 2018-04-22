@@ -41,6 +41,7 @@ RenderSettings:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 =======
   m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
@@ -51,6 +52,9 @@ RenderSettings:
 =======
   m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 >>>>>>> parent of 1feef8d... Editor 4
+=======
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+>>>>>>> parent of 9a88f2a... revert Editor 3.2
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -652,6 +656,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 59810777}
+<<<<<<< HEAD
 --- !u!1 &78516311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,6 +1440,8 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 59810777}
+=======
+>>>>>>> parent of 9a88f2a... revert Editor 3.2
 --- !u!1 &78516311
 GameObject:
   m_ObjectHideFlags: 0
@@ -12530,8 +12537,11 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 1}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 1feef8d... Editor 4
 =======
 >>>>>>> parent of 1feef8d... Editor 4
 =======
 >>>>>>> parent of 1feef8d... Editor 4
+=======
+>>>>>>> parent of 9a88f2a... revert Editor 3.2

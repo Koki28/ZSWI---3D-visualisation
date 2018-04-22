@@ -9,12 +9,15 @@ public class ShowPanels : MonoBehaviour
     public GameObject optionsTint;                          //Store a reference to the Game Object OptionsTint 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public GameObject menuPanel;                            //Store a reference to the Game Object MenuPanel 
     public GameObject scenePanel;                           //Store a reference to the Game Object ScenePanel 
     public GameObject aboutPanel;                           //Store a reference to the Game Object AboutPanel 
 =======
 =======
 >>>>>>> parent of 1feef8d... Editor 4
+=======
+>>>>>>> parent of 9a88f2a... revert Editor 3.2
     public GameObject menuPanel;							//Store a reference to the Game Object MenuPanel 
     public GameObject scenePanel;							//Store a reference to the Game Object ScenePanel 
 
@@ -63,6 +66,7 @@ public class ShowPanels : MonoBehaviour
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     //Call this function to activate and display the About panel during the main menu
     public void ShowAboutPanel()
     {
@@ -82,6 +86,10 @@ public class ShowPanels : MonoBehaviour
     //Call this function to deactivate and hide the Options and Scene panel during the main menu
     public void HideOptionsPanel()
 >>>>>>> parent of 1feef8d... Editor 4
+=======
+    //Call this function to deactivate and hide the Options and Scene panel during the main menu
+    public void HideOptionsPanel()
+>>>>>>> parent of 9a88f2a... revert Editor 3.2
     {
         menuPanel.SetActive(true);
         optionsPanel.SetActive(false);
