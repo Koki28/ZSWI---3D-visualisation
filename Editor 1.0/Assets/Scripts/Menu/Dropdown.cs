@@ -10,7 +10,7 @@ public class Dropdown : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
 	// Use this for initialization
 	void Start () {
-		container = transform.FindChild ("Container").GetComponent<RectTransform> ();
+		container = transform.Find ("Container").GetComponent<RectTransform> ();
 		isOpen = false;
 	}
 	
