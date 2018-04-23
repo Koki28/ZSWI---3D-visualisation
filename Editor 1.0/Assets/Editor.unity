@@ -3173,6 +3173,7 @@ GameObject:
   - component: {fileID: 553170187}
   - component: {fileID: 553170186}
   - component: {fileID: 553170185}
+  - component: {fileID: 553170188}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3189,16 +3190,16 @@ RectTransform:
   m_GameObject: {fileID: 553170183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8621876, y: 1, z: 1}
   m_Children:
   - {fileID: 739039638}
   m_Father: {fileID: 1264645485}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.019439893, y: 0.8366682}
-  m_AnchorMax: {x: 0.06067213, y: 0.9433319}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -460, y: 124.5}
+  m_SizeDelta: {x: 40, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &553170185
 MonoBehaviour:
@@ -3273,7 +3274,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3288,6 +3289,25 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 553170183}
+--- !u!131 &553170188
+GUITexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 553170183}
+  m_Enabled: 1
+  m_Texture: {fileID: 2800000, guid: 3b2f98c088ed01d4ca990bf1e988f393, type: 3}
+  m_Color: {r: 0.8313726, g: 0.8980393, b: 0.90196085, a: 0.5}
+  m_PixelInset:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
 --- !u!1 &580916343
 GameObject:
   m_ObjectHideFlags: 0
