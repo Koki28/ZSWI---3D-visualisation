@@ -19,6 +19,7 @@ public class NewBehaviourScript : MonoBehaviour {
     public void OnClickCube()
     {
 		//transform.position = new Vector3(508.5f, 191.5f, 5.0f);
-		Instantiate(cube, new Vector3(508.0f, 191.0f, -5.0f), transform.rotation);
+		Instantiate(cube, new Vector3(0.0f, 0.0f, -5.0f), transform.rotation);
+
     }
 }
