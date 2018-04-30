@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -5297,7 +5297,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1030911156}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.22886798
+  m_Size: 0.23089471
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8642,7 +8642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea34776df4a9c5b4a8d1d0608b300c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 1175796757328844, guid: f339d5d76eb3a5240bd7737708764f61, type: 2}
+  cube: {fileID: 1785057866501900, guid: 309de468641691e469b5613582458a2c, type: 2}
 --- !u!114 &1690029817
 MonoBehaviour:
   m_ObjectHideFlags: 0
