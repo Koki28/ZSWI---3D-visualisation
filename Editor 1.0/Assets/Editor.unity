@@ -5298,7 +5298,11 @@ MonoBehaviour:
   m_Direction: 2
   m_Value: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Size: 0.21819942
+=======
+  m_Size: 0.23089471
+>>>>>>> 117dd58107a13808cf94d5707803772ef8ced8e5
 =======
   m_Size: 0.23089471
 >>>>>>> 117dd58107a13808cf94d5707803772ef8ced8e5
@@ -8795,11 +8799,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
   prefab: {fileID: 1175796757328844, guid: f339d5d76eb3a5240bd7737708764f61, type: 2}
   shelf: {fileID: 1768861454757830, guid: 81058c4f50b99af42b1b4db677fbf98a, type: 2}
   hiearchyPanel: {fileID: 631724314}
   textFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   hierarchyPanel: {fileID: 631724313}
+=======
+  prefab: {fileID: 1785057866501900, guid: 309de468641691e469b5613582458a2c, type: 2}
+  shelf: {fileID: 1768861454757830, guid: 81058c4f50b99af42b1b4db677fbf98a, type: 2}
+  hiearchyPanel: {fileID: 0}
+>>>>>>> 117dd58107a13808cf94d5707803772ef8ced8e5
 =======
   prefab: {fileID: 1785057866501900, guid: 309de468641691e469b5613582458a2c, type: 2}
   shelf: {fileID: 1768861454757830, guid: 81058c4f50b99af42b1b4db677fbf98a, type: 2}
