@@ -10,7 +10,6 @@ public class CallingPrefabs : MonoBehaviour
     public GameObject shelf;
     int bubla = 0;
 
-    public Transform hiearchyPanel;
     private static List<GameObject> listGO;
     public Font textFont;
     public GameObject hierarchyPanel;
@@ -51,7 +50,7 @@ public class CallingPrefabs : MonoBehaviour
     void CreateA()
     {
         GameObject a = (GameObject)Instantiate(prefab);
-        a.transform.SetParent(hiearchyPanel.transform, false);
+        a.transform.SetParent(hierarchyPanel.transform, false);
     }
     public void createRef(string text)
     {
@@ -69,11 +68,11 @@ public class CallingPrefabs : MonoBehaviour
         newTextComp.text = text;
         newTextComp.color = Color.black;
         newTextComp.font = textFont;
-        newTextComp.alignment = TextAnchor.MiddleCenter;
+        newTextComp.alignment = TextAnchor.MiddleLeft;
         newTextComp.fontSize = 10;
 
         newText.transform.SetParent(hierarchyPanel.transform);
-        newText.transform.position = new Vector3(52.36487f, 354.2687f + bubla, 0.0f);
+        newText.transform.position = new Vector3(55.0f, 354.0f + bubla, 0.0f);
         bubla = bubla - 10;
         //GameObject a = (GameObject)Instantiate(newText);
         // a.transform.SetParent(transform, false);
