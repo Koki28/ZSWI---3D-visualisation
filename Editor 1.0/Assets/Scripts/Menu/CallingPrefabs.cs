@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class CallingPrefabs : MonoBehaviour
 {
 
+    public GameObject buttonPrefab;
+    public GameObject panelToAttachButtonsTo;
+
     public GameObject prefab;
     public GameObject shelf;
     int bubla = 0;
@@ -29,7 +32,8 @@ public class CallingPrefabs : MonoBehaviour
     public void OnClickCube()
     {
         Instantiate(prefab, new Vector3(0.0f, 0.0f, -5.0f), transform.rotation);
-        createRef(prefab.name);
+        MakeButt(prefab.name);
+        //createRef(prefab.name);
         //listGO.Add((GameObject)Instantiate(prefab, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
         // CreateA();
     }
@@ -37,7 +41,8 @@ public class CallingPrefabs : MonoBehaviour
     public void OnClickShelf()
     {
         Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), transform.rotation);
-        createRef(shelf.name);
+        MakeButt(shelf.name);
+       // createRef(shelf.name);
         //listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
         // CreateA();
     }
@@ -52,7 +57,25 @@ public class CallingPrefabs : MonoBehaviour
         GameObject a = (GameObject)Instantiate(prefab);
         a.transform.SetParent(hierarchyPanel.transform, false);
     }
-    public void createRef(string text)
+
+    void MakeButt(string nameGO)//Creates a button and sets it up
+    {
+        GameObject button = (GameObject)Instantiate(buttonPrefab);
+        button.transform.SetParent(hierarchyPanel.transform);//Setting button parent
+        button.transform.position = new Vector3(43.0f, 354.0f + bubla, 0.0f);
+        button.GetComponent<Button>().onClick.AddListener(OnClick);//Setting what button does when clicked
+                                                                   //Next line assumes button has child with text as first gameobject like button created from GameObject->UI->Button
+        button.transform.GetChild(0).GetComponent<Text>().text = nameGO;//Changing text
+        bubla = bubla - 18;
+    }
+    void OnClick()
+    {
+        Debug.Log("clicked!");
+    }
+
+
+
+public void createRef(string text)
     {
         if (text == null)
         {

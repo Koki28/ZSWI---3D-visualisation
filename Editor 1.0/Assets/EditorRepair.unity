@@ -8972,6 +8972,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea34776df4a9c5b4a8d1d0608b300c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonPrefab: {fileID: 1891281483301114, guid: a8ba4a9ce9963a941977b4edc7a75e0e,
+    type: 2}
+  panelToAttachButtonsTo: {fileID: 0}
   prefab: {fileID: 1175796757328844, guid: f339d5d76eb3a5240bd7737708764f61, type: 2}
   shelf: {fileID: 1768861454757830, guid: 81058c4f50b99af42b1b4db677fbf98a, type: 2}
   textFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
