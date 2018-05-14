@@ -9,8 +9,15 @@ public class CallingPrefabs : MonoBehaviour
     public GameObject buttonPrefab;
     public GameObject panelToAttachButtonsTo;
 
-    public GameObject prefab;
+    public GameObject belt;
     public GameObject shelf;
+	public GameObject table;
+	public GameObject forklift;
+	public GameObject truck;
+	public GameObject floor;
+
+	public GameObject active;
+
     int bubla = 0;
 
     private static List<GameObject> listGO;
@@ -31,8 +38,8 @@ public class CallingPrefabs : MonoBehaviour
 
     public void OnClickCube()
     {
-        Instantiate(prefab, new Vector3(0.0f, 0.0f, -5.0f), transform.rotation);
-        MakeButt(prefab.name);
+        Instantiate(belt, new Vector3(0.0f, 0.0f, -5.0f), transform.rotation);
+        MakeButt(belt.name);
         //createRef(prefab.name);
         //listGO.Add((GameObject)Instantiate(prefab, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
         // CreateA();
@@ -40,12 +47,48 @@ public class CallingPrefabs : MonoBehaviour
 
     public void OnClickShelf()
     {
-        Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), transform.rotation);
+        Instantiate(shelf, new Vector3(0.0f, 0.0f, 500.0f), transform.rotation);
         MakeButt(shelf.name);
        // createRef(shelf.name);
         //listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
         // CreateA();
     }
+
+	public void OnClickTable()
+	{
+		Instantiate(table, new Vector3(0.0f, 0.0f, 100.0f), transform.rotation);
+		MakeButt(table.name);
+		// createRef(shelf.name);
+		//listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
+		// CreateA();
+	}
+
+	public void OnClickForklift()
+	{
+		Instantiate(forklift, new Vector3(0.0f, 0.0f, 0.0f), transform.rotation);
+		MakeButt(forklift.name);
+		// createRef(shelf.name);
+		//listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
+		// CreateA();
+	}
+
+	public void OnClickTruck()
+	{
+		Instantiate(truck, new Vector3(0.0f, 0.0f, 10.0f), transform.rotation);
+		MakeButt(truck.name);
+		// createRef(shelf.name);
+		//listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
+		// CreateA();
+	}
+
+	public void OnClickFloor()
+	{
+		Instantiate(floor, new Vector3(0.0f, 0.0f, 10.0f), transform.rotation);
+		MakeButt(floor.name);
+		// createRef(shelf.name);
+		//listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
+		// CreateA();
+	}
 
     public static List<GameObject> getGOList()
     {
@@ -54,7 +97,7 @@ public class CallingPrefabs : MonoBehaviour
 
     void CreateA()
     {
-        GameObject a = (GameObject)Instantiate(prefab);
+        GameObject a = (GameObject)Instantiate(belt);
         a.transform.SetParent(hierarchyPanel.transform, false);
     }
 
@@ -71,6 +114,7 @@ public class CallingPrefabs : MonoBehaviour
     void OnClick()
     {
         Debug.Log("clicked!");
+		active = belt;
     }
 
 
