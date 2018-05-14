@@ -18,7 +18,7 @@ public class CallingPrefabs : MonoBehaviour
 
 	public GameObject active;
 
-    int bubla = 0;
+    int tmp = 0;
 
     private static List<GameObject> listGO;
     public Font textFont;
@@ -105,11 +105,11 @@ public class CallingPrefabs : MonoBehaviour
     {
         GameObject button = (GameObject)Instantiate(buttonPrefab);
         button.transform.SetParent(hierarchyPanel.transform);//Setting button parent
-        button.transform.position = new Vector3(43.0f, 354.0f + bubla, 0.0f);
+        button.transform.position = new Vector3(43.0f, 354.0f + tmp, 0.0f);
         button.GetComponent<Button>().onClick.AddListener(OnClick);//Setting what button does when clicked
                                                                    //Next line assumes button has child with text as first gameobject like button created from GameObject->UI->Button
         button.transform.GetChild(0).GetComponent<Text>().text = nameGO;//Changing text
-        bubla = bubla - 18;
+        tmp = tmp - 18;
     }
     void OnClick()
     {
@@ -139,8 +139,8 @@ public void createRef(string text)
         newTextComp.fontSize = 10;
 
         newText.transform.SetParent(hierarchyPanel.transform);
-        newText.transform.position = new Vector3(55.0f, 354.0f + bubla, 0.0f);
-        bubla = bubla - 10;
+        newText.transform.position = new Vector3(55.0f, 354.0f + tmp, 0.0f);
+        tmp = tmp - 10;
         //GameObject a = (GameObject)Instantiate(newText);
         // a.transform.SetParent(transform, false);
     }
