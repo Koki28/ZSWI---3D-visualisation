@@ -19,83 +19,127 @@ public class loadScene : MonoBehaviour {
     public GameObject floor;
 
     string path;
+    int objCount;
 
     public GameObject active;
+
+    List<GameObject> objects;
+    List<Vector3> vectors;
 
 
     // Use this for initialization
     void Start () {
-
+        objects = new List<GameObject>();
+        vectors = new List<Vector3>();
     }
 
-    public void onClickGo() {
+    public void loadFromJson() {
 
         // open file panel
         path = EditorUtility.OpenFilePanel("Open your json file", "", "json");
 
+        if(path != null) {
 
-        List<GameObject> list = new List<GameObject>() {belt, shelf, table, forklift, truck, floor };
-        string fileData = "";
+            List<GameObject> list = new List<GameObject>() {belt, shelf, table, forklift, truck, floor };
+            string fileData = "";
 
-        try {
+            try {
 
-            fileData = File.ReadAllText(path);
-            Debug.Log(fileData);
+                fileData = File.ReadAllText(path);
+                Debug.Log(fileData);
 
-        }
-        catch (IOException e) {
-            Debug.Log("File not found");
-            Debug.Log(e.Message);
-
-        }
-
-        Console.Read();
-
-
-        //string input = "{models: [{name: \"belt_prefab\", \"x\": \"0.0f\", \"y\": \"0.0f\", \"z\": \"-5.0f\"},{id: \"shelf\",\"x\": \"0.0f\", \"y\": \"0.0f\", \"z\": \"500.0f\"}]}";
-
-        // default active model
-        active = table;
-
-        // counting number of objects
-        int objCount = 0;
-        for(int i = 0; i < fileData.Length; i++) {
-            if(fileData[i].Equals('}')) {
-                objCount++;
             }
-        }
+            catch (IOException e) {
+                Debug.Log("File not found");
+                Debug.Log(e.Message);
 
-        var data = JSON.Parse(fileData);
+            }
 
-        var nameString = data["models"][0]["name"].Value;
-        var x = data["models"][0]["x"].AsFloat;
-        var y = data["models"][0]["y"].AsFloat;
-        var z = data["models"][0]["z"].AsFloat;
 
-        for(int j = 0; j < objCount; j++) {
+            //string input = "{models: [{name: \"belt_prefab\", \"x\": \"0.0f\", \"y\": \"0.0f\", \"z\": \"-5.0f\"},{id: \"shelf\",\"x\": \"0.0f\", \"y\": \"0.0f\", \"z\": \"500.0f\"}]}";
 
-            Debug.Log(nameString + x + y + z);
+            // default active model
+            active = table;
 
-            for(int i = 0; i < list.Count; i++) {
-                if (nameString.Equals(list[i].name)) {
-                    active = list[i];
-                    break;
+            // counting number of objects
+            objCount = 0;
+            for(int i = 0; i < fileData.Length; i++) {
+                if(fileData[i].Equals('}')) {
+                    objCount++;
                 }
             }
+            Debug.Log("objCount: " + objCount);
 
-            Instantiate(active, new Vector3(x, y, z), transform.rotation);
-            //MakeButt(active.name);
+            var data = JSON.Parse(fileData);
 
-            nameString = data["models"][j]["name"].Value;
-            x = data["models"][j]["x"].AsFloat;
-            y = data["models"][j]["y"].AsFloat;
-            z = data["models"][j]["z"].AsFloat;
+            var nameString = data["models"][0]["name"].Value;
+            var x = data["models"][0]["x"].AsFloat;
+            var y = data["models"][0]["y"].AsFloat;
+            var z = data["models"][0]["z"].AsFloat;
+
+            for(int j = 0; j < objCount-1; j++) {
+
+                Debug.Log(nameString + x + y + z);
+
+                for(int i = 0; i < list.Count; i++) {
+                    if (nameString.Equals(list[i].name)) {
+                        active = list[i];
+                        break;
+                    }
+                }
+
+                Vector3 vector = new Vector3(x, y, z);
+                Instantiate(active, vector, transform.rotation);
+                objects.Add(active);
+                vectors.Add(vector);
+                //MakeButt(active.name);
+
+                nameString = data["models"][j+1]["name"].Value;
+                x = data["models"][j+1]["x"].AsFloat;
+                y = data["models"][j+1]["y"].AsFloat;
+                z = data["models"][j+1]["z"].AsFloat;
+                
+            }
 
         }
+    }
+
+
+    public void saveAs() {
+
+        String data = "{@models: [@";
+
+        for(int i = 0; i < objCount-1; i++) {
+            data += "{@";
+            data += "\"name\": " + "\"" + objects[i].name + "\"" + ",@";
+            data += "\"x\": " + "\"" + vectors[i].x + "\"" + ",@";
+            data += "\"y\": " + "\"" + vectors[i].y + "\"" + ",@";
+            data += "\"z\": " + "\"" + vectors[i].z + "\"" + "@";
+
+            if(i == objCount - 2) {
+                data += "}@";
+            }
+            else {
+                data += "},@";
+            }
+            
+        }
+
+        data += "]@}";
+
+        data = data.Replace("@", System.Environment.NewLine);
+
+        var path = EditorUtility.SaveFilePanel( "Save your scene", "", "scene1.json", "json");
+
+        //System.IO.File.WriteAllText("path", firstnameGUI + ", " + lastnameGUI);
+
+        StreamWriter writer = new StreamWriter(path, false);
+        writer.WriteLine(data);
+        writer.Close();
+
 
 
     }
-
 
 
     // Update is called once per frame
