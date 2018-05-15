@@ -43,7 +43,7 @@ public class CallingPrefabs : MonoBehaviour
     public void OnClickCube()
     {
         Vector3 vector = new Vector3(0, 0, -5);
-        Instantiate(belt, new Vector3(0.0f, 0.0f, -5.0f), transform.rotation);
+        Instantiate(belt, vector, transform.rotation);
         MakeButt(belt.name);
         ls.objects.Add(belt);
         ls.vectors.Add(vector);
@@ -55,21 +55,25 @@ public class CallingPrefabs : MonoBehaviour
 
     public void OnClickShelf()
     {
-        Instantiate(shelf, new Vector3(0.0f, 0.0f, 500.0f), transform.rotation);
+        Vector3 vector = new Vector3(0, 0, 500);
+        Instantiate(shelf, vector, transform.rotation);
         MakeButt(shelf.name);
-       // createRef(shelf.name);
+
+        ls.objects.Add(shelf);
+        ls.vectors.Add(vector);
+        // createRef(shelf.name);
         //listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
         // CreateA();
     }
 
 	public void OnClickTable()
 	{
-		Instantiate(table, new Vector3(0.0f, 0.0f, 100.0f), transform.rotation);
+        Vector3 vector = new Vector3(0, 0, 100);
+        Instantiate(table, new Vector3(0.0f, 0.0f, 100.0f), transform.rotation);
 		MakeButt(table.name);
 
-        loadScene ls = new loadScene();
         ls.objects.Add(table);
-        ls.vectors.Add(new Vector3(30, 30, 100.0f));
+        ls.vectors.Add(vector);
 
         // createRef(shelf.name);
         //listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
@@ -78,32 +82,42 @@ public class CallingPrefabs : MonoBehaviour
 
 	public void OnClickForklift()
 	{
-		Instantiate(forklift, new Vector3(0.0f, 0.0f, 0.0f), transform.rotation);
+        Vector3 vector = new Vector3(0, 0, 0);
+        Instantiate(forklift, vector, transform.rotation);
 		MakeButt(forklift.name);
-		// createRef(shelf.name);
-		//listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
-		// CreateA();
-	}
+
+        ls.objects.Add(forklift);
+        ls.vectors.Add(vector);
+        // createRef(shelf.name);
+        //listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
+        // CreateA();
+    }
 
 	public void OnClickTruck()
 	{
-		Instantiate(truck, new Vector3(0.0f, 0.0f, 10.0f), transform.rotation);
+        Vector3 vector = new Vector3(0, 0, 10);
+        Instantiate(truck, vector, transform.rotation);
 		MakeButt(truck.name);
-        
 
-		// createRef(shelf.name);
-		//listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
-		// CreateA();
-	}
+        ls.objects.Add(truck);
+        ls.vectors.Add(vector);
+        // createRef(shelf.name);
+        //listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
+        // CreateA();
+    }
 
 	public void OnClickFloor()
 	{
-		Instantiate(floor, new Vector3(0.0f, 0.0f, 10.0f), transform.rotation);
+        Vector3 vector = new Vector3(0, 0, 10);
+        Instantiate(floor, vector, transform.rotation);
 		MakeButt(floor.name);
-		// createRef(shelf.name);
-		//listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
-		// CreateA();
-	}
+
+        ls.objects.Add(floor);
+        ls.vectors.Add(vector);
+        // createRef(shelf.name);
+        //listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
+        // CreateA();
+    }
 
     public static List<GameObject> getGOList()
     {
