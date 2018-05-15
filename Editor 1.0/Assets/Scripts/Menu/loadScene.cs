@@ -10,8 +10,7 @@ using UnityEditor;
 
 public class loadScene : MonoBehaviour {
 
-    
-
+   
     public GameObject belt;
     public GameObject shelf;
     public GameObject table;

@@ -17,14 +17,18 @@ public class CallingPrefabs : MonoBehaviour
 	public GameObject floor;
 
 	public GameObject active;
+    public GameObject unactive;
 
     int tmp = 0;
 
     private static List<GameObject> listGO;
     public Font textFont;
     public GameObject hierarchyPanel;
+    public List<GameObject> buttons = new List<GameObject>();
+    int buttonIndex = 0;
 
     public loadScene ls;
+
 
     // Use this for initialization
     void Start() 
@@ -32,21 +36,25 @@ public class CallingPrefabs : MonoBehaviour
         listGO = new List<GameObject>();
 
         ls = FindObjectOfType(typeof(loadScene)) as loadScene;
+        active.AddComponent<NewBehaviourScript>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
-
+    void Update() {
+        
     }
 
     public void OnClickCube()
     {
         Vector3 vector = new Vector3(0, 0, -5);
-        Instantiate(belt, vector, transform.rotation);
+        GameObject beltObject = Instantiate(belt, vector, transform.rotation);
         MakeButt(belt.name);
         ls.objects.Add(belt);
         ls.vectors.Add(vector);
+
+        active = unactive;
+
+        beltObject.AddComponent<NewBehaviourScript>();
 
         //createRef(prefab.name);
         //listGO.Add((GameObject)Instantiate(prefab, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
@@ -132,18 +140,36 @@ public class CallingPrefabs : MonoBehaviour
 
     void MakeButt(string nameGO)//Creates a button and sets it up
     {
+
         GameObject button = (GameObject)Instantiate(buttonPrefab);
         button.transform.SetParent(hierarchyPanel.transform);//Setting button parent
         button.transform.position = new Vector3(43.0f, 354.0f + tmp, 0.0f);
         button.GetComponent<Button>().onClick.AddListener(OnClick);//Setting what button does when clicked
-                                                                   //Next line assumes button has child with text as first gameobject like button created from GameObject->UI->Button
+                                                                               //Next line assumes button has child with text as first gameobject like button created from GameObject->UI->Button
+
         button.transform.GetChild(0).GetComponent<Text>().text = nameGO;//Changing text
         tmp = tmp - 18;
+
+        buttons.Add(button);
+
+        buttonIndex++;
     }
+
+    void makeButton() {
+
+
+
+
+
+
+
+    }
+
     void OnClick()
     {
         Debug.Log("clicked!");
 		active = belt;
+        Debug.Log(active.name);
     }
 
 
