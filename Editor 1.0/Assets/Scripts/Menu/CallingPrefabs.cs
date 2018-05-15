@@ -24,10 +24,14 @@ public class CallingPrefabs : MonoBehaviour
     public Font textFont;
     public GameObject hierarchyPanel;
 
+    public loadScene ls;
+
     // Use this for initialization
     void Start() 
     {
         listGO = new List<GameObject>();
+
+        ls = FindObjectOfType(typeof(loadScene)) as loadScene;
     }
 
     // Update is called once per frame
@@ -38,8 +42,12 @@ public class CallingPrefabs : MonoBehaviour
 
     public void OnClickCube()
     {
+        Vector3 vector = new Vector3(0, 0, -5);
         Instantiate(belt, new Vector3(0.0f, 0.0f, -5.0f), transform.rotation);
         MakeButt(belt.name);
+        ls.objects.Add(belt);
+        ls.vectors.Add(vector);
+
         //createRef(prefab.name);
         //listGO.Add((GameObject)Instantiate(prefab, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
         // CreateA();
@@ -58,10 +66,15 @@ public class CallingPrefabs : MonoBehaviour
 	{
 		Instantiate(table, new Vector3(0.0f, 0.0f, 100.0f), transform.rotation);
 		MakeButt(table.name);
-		// createRef(shelf.name);
-		//listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
-		// CreateA();
-	}
+
+        loadScene ls = new loadScene();
+        ls.objects.Add(table);
+        ls.vectors.Add(new Vector3(30, 30, 100.0f));
+
+        // createRef(shelf.name);
+        //listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
+        // CreateA();
+    }
 
 	public void OnClickForklift()
 	{
@@ -76,6 +89,8 @@ public class CallingPrefabs : MonoBehaviour
 	{
 		Instantiate(truck, new Vector3(0.0f, 0.0f, 10.0f), transform.rotation);
 		MakeButt(truck.name);
+        
+
 		// createRef(shelf.name);
 		//listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
 		// CreateA();

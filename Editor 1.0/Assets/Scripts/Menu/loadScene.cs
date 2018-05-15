@@ -10,6 +10,7 @@ using UnityEditor;
 
 public class loadScene : MonoBehaviour {
 
+    
 
     public GameObject belt;
     public GameObject shelf;
@@ -23,8 +24,8 @@ public class loadScene : MonoBehaviour {
 
     public GameObject active;
 
-    List<GameObject> objects;
-    List<Vector3> vectors;
+    public List<GameObject> objects;
+    public List<Vector3> vectors;
 
 
     // Use this for initialization
@@ -101,6 +102,7 @@ public class loadScene : MonoBehaviour {
                 
             }
 
+
         }
     }
 
@@ -109,7 +111,7 @@ public class loadScene : MonoBehaviour {
 
         String data = "{@models: [@";
 
-        for(int i = 0; i < objCount-1; i++) {
+        for(int i = 0; i < objects.Count; i++) {
             data += "{@";
             data += "\"name\": " + "\"" + objects[i].name + "\"" + ",@";
             data += "\"x\": " + "\"" + vectors[i].x + "\"" + ",@";
