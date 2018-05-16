@@ -11,6 +11,7 @@ public class CallingPrefabs : MonoBehaviour
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public GameObject cube;
 =======
     public GameObject belt;
@@ -18,42 +19,31 @@ public class CallingPrefabs : MonoBehaviour
 =======
     public GameObject belt;
 >>>>>>> 5ea65a855431b962930a973f98e80895e0da6014
+=======
+    public GameObject prefab;
+>>>>>>> parent of f6cdfc6... butTry
     public GameObject shelf;
-	public GameObject table;
-	public GameObject forklift;
-	public GameObject truck;
-	public GameObject floor;
-
-	public GameObject active;
-    public GameObject unactive;
-
-    int tmp = 0;
+    int bubla = 0;
 
     private static List<GameObject> listGO;
     public Font textFont;
     public GameObject hierarchyPanel;
-    public List<GameObject> buttons = new List<GameObject>();
-    int buttonIndex = 0;
-
-    public loadScene ls;
-
 
     // Use this for initialization
     void Start() 
     {
         listGO = new List<GameObject>();
-
-        ls = FindObjectOfType(typeof(loadScene)) as loadScene;
-        active.AddComponent<NewBehaviourScript>();
     }
 
     // Update is called once per frame
-    void Update() {
-        
+    void Update()
+    {
+
     }
 
     public void OnClickCube()
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         Instantiate(cube, new Vector3(0.0f, 0.0f, -5.0f), transform.rotation);
@@ -74,14 +64,18 @@ public class CallingPrefabs : MonoBehaviour
 
         beltObject.AddComponent<NewBehaviourScript>();
 
+=======
+        Instantiate(prefab, new Vector3(0.0f, 0.0f, -5.0f), transform.rotation);
+        MakeButt(prefab.name);
+>>>>>>> parent of f6cdfc6... butTry
         //createRef(prefab.name);
         //listGO.Add((GameObject)Instantiate(prefab, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
         // CreateA();
->>>>>>> a1db976bc2f3b34fc3d45fb10600a5c39acc2f20
     }
 
     public void OnClickShelf()
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), transform.rotation);
@@ -207,21 +201,20 @@ public class CallingPrefabs : MonoBehaviour
         ls.objects.Add(floor);
         ls.vectors.Add(vector);
         // createRef(shelf.name);
+=======
+        Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), transform.rotation);
+        MakeButt(shelf.name);
+       // createRef(shelf.name);
+>>>>>>> parent of f6cdfc6... butTry
         //listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
         // CreateA();
->>>>>>> a1db976bc2f3b34fc3d45fb10600a5c39acc2f20
     }
 
-    void MakeButt(GameObject pref)//Creates a button and sets it up
+    public static List<GameObject> getGOList()
     {
-        GameObject button = (GameObject)Instantiate(buttonPrefab);
-        button.transform.SetParent(hierarchyPanel.transform);//Setting button parent
-        button.transform.position = new Vector3(43.0f, 354.0f + bubla, 0.0f);
-        button.GetComponent<Button>().onClick.AddListener(OnClick);//Setting what button does when clicked
-                                                                   //Next line assumes button has child with text as first gameobject like button created from GameObject->UI->Button
-        button.transform.GetChild(0).GetComponent<Text>().text = pref.name;//Changing text
-        bubla = bubla - 18;
+        return listGO;
     }
+<<<<<<< HEAD
     void OnClick()
     {
 <<<<<<< HEAD
@@ -233,28 +226,22 @@ public class CallingPrefabs : MonoBehaviour
 =======
 >>>>>>> 5ea65a855431b962930a973f98e80895e0da6014
         GameObject a = (GameObject)Instantiate(belt);
+=======
+
+    void CreateA()
+    {
+        GameObject a = (GameObject)Instantiate(prefab);
+>>>>>>> parent of f6cdfc6... butTry
         a.transform.SetParent(hierarchyPanel.transform, false);
->>>>>>> a1db976bc2f3b34fc3d45fb10600a5c39acc2f20
     }
 
-}
-
-
-public class ButtonPrefabClass : MonoBehaviour
-{
-
-    public GameObject buttonPrefab;
-    public GameObject hierarchyPanel;
-    private GameObject pree;
-    int bubla = 0;
-
-    public void MakeButt(GameObject pref)//Creates a button and sets it up
+    void MakeButt(string nameGO)//Creates a button and sets it up
     {
-
         GameObject button = (GameObject)Instantiate(buttonPrefab);
         button.transform.SetParent(hierarchyPanel.transform);//Setting button parent
-        button.transform.position = new Vector3(43.0f, 354.0f + tmp, 0.0f);
+        button.transform.position = new Vector3(43.0f, 354.0f + bubla, 0.0f);
         button.GetComponent<Button>().onClick.AddListener(OnClick);//Setting what button does when clicked
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                                                                    //Next line assumes button has child with text as first gameobject like button created from GameObject->UI->Button
@@ -286,22 +273,18 @@ public class ButtonPrefabClass : MonoBehaviour
 
 
 
+=======
+                                                                   //Next line assumes button has child with text as first gameobject like button created from GameObject->UI->Button
+        button.transform.GetChild(0).GetComponent<Text>().text = nameGO;//Changing text
+        bubla = bubla - 18;
+>>>>>>> parent of f6cdfc6... butTry
     }
-
     void OnClick()
     {
-<<<<<<< HEAD
-=======
         Debug.Log("clicked!");
-		active = belt;
-        Debug.Log(active.name);
     }
->>>>>>> a1db976bc2f3b34fc3d45fb10600a5c39acc2f20
 
-        Debug.Log(pree.name + " j");
 
-<<<<<<< HEAD
-=======
 
 public void createRef(string text)
     {
@@ -323,10 +306,9 @@ public void createRef(string text)
         newTextComp.fontSize = 10;
 
         newText.transform.SetParent(hierarchyPanel.transform);
-        newText.transform.position = new Vector3(55.0f, 354.0f + tmp, 0.0f);
-        tmp = tmp - 10;
+        newText.transform.position = new Vector3(55.0f, 354.0f + bubla, 0.0f);
+        bubla = bubla - 10;
         //GameObject a = (GameObject)Instantiate(newText);
         // a.transform.SetParent(transform, false);
->>>>>>> a1db976bc2f3b34fc3d45fb10600a5c39acc2f20
     }
 }
