@@ -52,8 +52,6 @@ public class CallingPrefabs : MonoBehaviour
         ls.objects.Add(belt);
         ls.vectors.Add(vector);
 
-        active = unactive;
-
         beltObject.AddComponent<NewBehaviourScript>();
 
         //createRef(prefab.name);
