@@ -12,6 +12,7 @@ public class CallingPrefabs : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public GameObject cube;
 =======
     public GameObject belt;
@@ -19,6 +20,9 @@ public class CallingPrefabs : MonoBehaviour
 =======
     public GameObject belt;
 >>>>>>> 5ea65a855431b962930a973f98e80895e0da6014
+=======
+    public GameObject prefab;
+>>>>>>> parent of f6cdfc6... butTry
 =======
     public GameObject prefab;
 >>>>>>> parent of f6cdfc6... butTry
@@ -46,6 +50,7 @@ public class CallingPrefabs : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         Instantiate(cube, new Vector3(0.0f, 0.0f, -5.0f), transform.rotation);
        // ButtonClass bpc = new ButtonClass();
         //bpc.MakeButt(cube);
@@ -60,10 +65,12 @@ public class CallingPrefabs : MonoBehaviour
         ls.objects.Add(belt);
         ls.vectors.Add(vector);
 
-        active = unactive;
-
         beltObject.AddComponent<NewBehaviourScript>();
 
+=======
+        Instantiate(prefab, new Vector3(0.0f, 0.0f, -5.0f), transform.rotation);
+        MakeButt(prefab.name);
+>>>>>>> parent of f6cdfc6... butTry
 =======
         Instantiate(prefab, new Vector3(0.0f, 0.0f, -5.0f), transform.rotation);
         MakeButt(prefab.name);
@@ -75,6 +82,7 @@ public class CallingPrefabs : MonoBehaviour
 
     public void OnClickShelf()
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -148,10 +156,16 @@ public class CallingPrefabs : MonoBehaviour
         ls.vectors.Add(vector);
         // createRef(shelf.name);
 >>>>>>> 5ea65a855431b962930a973f98e80895e0da6014
+=======
+        Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), transform.rotation);
+        MakeButt(shelf.name);
+       // createRef(shelf.name);
+>>>>>>> parent of f6cdfc6... butTry
         //listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
         // CreateA();
     }
 
+<<<<<<< HEAD
 	public void OnClickTable()
 	{
         Vector3 vector = new Vector3(0, 0, 100);
@@ -210,10 +224,13 @@ public class CallingPrefabs : MonoBehaviour
         // CreateA();
     }
 
+=======
+>>>>>>> parent of f6cdfc6... butTry
     public static List<GameObject> getGOList()
     {
         return listGO;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     void OnClick()
     {
@@ -232,6 +249,12 @@ public class CallingPrefabs : MonoBehaviour
     {
         GameObject a = (GameObject)Instantiate(prefab);
 >>>>>>> parent of f6cdfc6... butTry
+=======
+
+    void CreateA()
+    {
+        GameObject a = (GameObject)Instantiate(prefab);
+>>>>>>> parent of f6cdfc6... butTry
         a.transform.SetParent(hierarchyPanel.transform, false);
     }
 
@@ -241,6 +264,7 @@ public class CallingPrefabs : MonoBehaviour
         button.transform.SetParent(hierarchyPanel.transform);//Setting button parent
         button.transform.position = new Vector3(43.0f, 354.0f + bubla, 0.0f);
         button.GetComponent<Button>().onClick.AddListener(OnClick);//Setting what button does when clicked
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -273,6 +297,11 @@ public class CallingPrefabs : MonoBehaviour
 
 
 
+=======
+                                                                   //Next line assumes button has child with text as first gameobject like button created from GameObject->UI->Button
+        button.transform.GetChild(0).GetComponent<Text>().text = nameGO;//Changing text
+        bubla = bubla - 18;
+>>>>>>> parent of f6cdfc6... butTry
 =======
                                                                    //Next line assumes button has child with text as first gameobject like button created from GameObject->UI->Button
         button.transform.GetChild(0).GetComponent<Text>().text = nameGO;//Changing text
