@@ -10,10 +10,14 @@ public class CallingPrefabs : MonoBehaviour
     public GameObject panelToAttachButtonsTo;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public GameObject cube;
 =======
     public GameObject belt;
 >>>>>>> a1db976bc2f3b34fc3d45fb10600a5c39acc2f20
+=======
+    public GameObject belt;
+>>>>>>> 5ea65a855431b962930a973f98e80895e0da6014
     public GameObject shelf;
 	public GameObject table;
 	public GameObject forklift;
@@ -51,12 +55,15 @@ public class CallingPrefabs : MonoBehaviour
     public void OnClickCube()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         Instantiate(cube, new Vector3(0.0f, 0.0f, -5.0f), transform.rotation);
        // ButtonClass bpc = new ButtonClass();
         //bpc.MakeButt(cube);
         MakeButt(cube);
 
 =======
+=======
+>>>>>>> 5ea65a855431b962930a973f98e80895e0da6014
         Vector3 vector = new Vector3(0, 0, -5);
         GameObject beltObject = Instantiate(belt, vector, transform.rotation);
         MakeButt(belt.name);
@@ -76,11 +83,14 @@ public class CallingPrefabs : MonoBehaviour
     public void OnClickShelf()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), transform.rotation);
         //ButtonClass bpc = new ButtonClass();
         //bpc.MakeButt(shelf);
         MakeButt(shelf);
 =======
+=======
+>>>>>>> 5ea65a855431b962930a973f98e80895e0da6014
         Vector3 vector = new Vector3(0, 0, 500);
         Instantiate(shelf, vector, transform.rotation);
         MakeButt(shelf.name);
@@ -88,6 +98,62 @@ public class CallingPrefabs : MonoBehaviour
         ls.objects.Add(shelf);
         ls.vectors.Add(vector);
         // createRef(shelf.name);
+<<<<<<< HEAD
+=======
+        //listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
+        // CreateA();
+    }
+
+	public void OnClickTable()
+	{
+        Vector3 vector = new Vector3(0, 0, 100);
+        Instantiate(table, new Vector3(0.0f, 0.0f, 100.0f), transform.rotation);
+		MakeButt(table.name);
+
+        ls.objects.Add(table);
+        ls.vectors.Add(vector);
+
+        // createRef(shelf.name);
+        //listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
+        // CreateA();
+    }
+
+	public void OnClickForklift()
+	{
+        Vector3 vector = new Vector3(0, 0, 0);
+        Instantiate(forklift, vector, transform.rotation);
+		MakeButt(forklift.name);
+
+        ls.objects.Add(forklift);
+        ls.vectors.Add(vector);
+        // createRef(shelf.name);
+        //listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
+        // CreateA();
+    }
+
+	public void OnClickTruck()
+	{
+        Vector3 vector = new Vector3(0, 0, 10);
+        Instantiate(truck, vector, transform.rotation);
+		MakeButt(truck.name);
+
+        ls.objects.Add(truck);
+        ls.vectors.Add(vector);
+        // createRef(shelf.name);
+        //listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
+        // CreateA();
+    }
+
+	public void OnClickFloor()
+	{
+        Vector3 vector = new Vector3(0, 0, 10);
+        Instantiate(floor, vector, transform.rotation);
+		MakeButt(floor.name);
+
+        ls.objects.Add(floor);
+        ls.vectors.Add(vector);
+        // createRef(shelf.name);
+>>>>>>> 5ea65a855431b962930a973f98e80895e0da6014
         //listGO.Add((GameObject)Instantiate(shelf, new Vector3(0.0f, 0.0f, -5.0f), Quaternion.identity));
         // CreateA();
     }
@@ -159,10 +225,13 @@ public class CallingPrefabs : MonoBehaviour
     void OnClick()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         Debug.Log(" clicked ");
 
 =======
+=======
+>>>>>>> 5ea65a855431b962930a973f98e80895e0da6014
         GameObject a = (GameObject)Instantiate(belt);
         a.transform.SetParent(hierarchyPanel.transform, false);
 >>>>>>> a1db976bc2f3b34fc3d45fb10600a5c39acc2f20
@@ -187,11 +256,14 @@ public class ButtonPrefabClass : MonoBehaviour
         button.transform.position = new Vector3(43.0f, 354.0f + tmp, 0.0f);
         button.GetComponent<Button>().onClick.AddListener(OnClick);//Setting what button does when clicked
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                                    //Next line assumes button has child with text as first gameobject like button created from GameObject->UI->Button
         button.transform.GetChild(0).GetComponent<Text>().text = pref.name;//Changing text
         bubla = bubla - 18;
         pree = pref;
 =======
+=======
+>>>>>>> 5ea65a855431b962930a973f98e80895e0da6014
                                                                                //Next line assumes button has child with text as first gameobject like button created from GameObject->UI->Button
 
         button.transform.GetChild(0).GetComponent<Text>().text = nameGO;//Changing text
@@ -200,7 +272,10 @@ public class ButtonPrefabClass : MonoBehaviour
         buttons.Add(button);
 
         buttonIndex++;
+<<<<<<< HEAD
 >>>>>>> a1db976bc2f3b34fc3d45fb10600a5c39acc2f20
+=======
+>>>>>>> 5ea65a855431b962930a973f98e80895e0da6014
     }
 
     void makeButton() {
