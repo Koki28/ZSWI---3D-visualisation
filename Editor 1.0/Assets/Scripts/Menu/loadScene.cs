@@ -82,6 +82,11 @@ public class loadScene : MonoBehaviour {
                 Debug.Log(nameString + x + y + z);
 
                 for(int i = 0; i < list.Count; i++) {
+
+                    Debug.Log("nameString" + nameString);
+                    Debug.Log("list name" + list[i].name);
+
+
                     if (nameString.Equals(list[i].name)) {
                         active = list[i];
                         break;

@@ -532,6 +532,12 @@ Prefab:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114809324609110006, guid: eaa17f6bd2645f646a7ef9c102b6339f,
+        type: 2}
+      propertyPath: forklift
+      value: 
+      objectReference: {fileID: 1796427124885916, guid: dc130a3220908584b9f725a1ef2f6aea,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eaa17f6bd2645f646a7ef9c102b6339f, type: 2}
   m_IsPrefabParent: 0
