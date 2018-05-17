@@ -1,0 +1,94 @@
+{
+models: [
+{
+"name": "table",
+"x": "0",
+"y": "0",
+"z": "0"
+},
+{
+"name": "IndustrialSmallTruck",
+"x": "0",
+"y": "0",
+"z": "10"
+},
+{
+"name": "Floor",
+"x": "0",
+"y": "0",
+"z": "10"
+},
+{
+"name": "Shelves_model 1 1 1 1",
+"x": "0",
+"y": "0",
+"z": "500"
+},
+{
+"name": "table",
+"x": "0",
+"y": "0",
+"z": "0"
+},
+{
+"name": "IndustrialSmallTruck",
+"x": "0",
+"y": "0",
+"z": "10"
+},
+{
+"name": "Floor",
+"x": "0",
+"y": "0",
+"z": "10"
+},
+{
+"name": "Shelves_model 1 1 1 1",
+"x": "0",
+"y": "0",
+"z": "500"
+},
+{
+"name": "Shelves_model 1 1 1 1",
+"x": "0",
+"y": "0",
+"z": "0"
+}
+{
+"name": "Jesterka 1 1 1",
+"x": "0",
+"y": "0",
+"z": "0"
+},
+{
+"name": "Jesterka 1 1 1",
+"x": "0",
+"y": "0",
+"z": "0"
+},
+{
+"name": "Jesterka 1 1 1",
+"x": "0",
+"y": "0",
+"z": "0"
+},
+{
+"name": "Jesterka 1 1 1",
+"x": "0",
+"y": "0",
+"z": "0"
+},
+{
+"name": "Jesterka 1 1 1",
+"x": "0",
+"y": "0",
+"z": "0"
+},
+{
+"name": "Jesterka 1 1 1",
+"x": "0",
+"y": "0",
+"z": "0"
+},
+]
+}
